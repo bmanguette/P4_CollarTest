@@ -99,6 +99,7 @@
             this.buttonCheckGolden.TabIndex = 16;
             this.buttonCheckGolden.Text = "Test Golden";
             this.buttonCheckGolden.UseVisualStyleBackColor = true;
+            this.buttonCheckGolden.Click += new System.EventHandler(this.buttonCheckGolden_Click);
             // 
             // label6
             // 
@@ -252,6 +253,11 @@
             this.label7.Size = new System.Drawing.Size(166, 13);
             this.label7.TabIndex = 35;
             this.label7.Text = "Batterie : 3400mV <mV<3700mV :";
+            // 
+            // BgW_CheckGolden
+            // 
+            this.BgW_CheckGolden.DoWork += new System.ComponentModel.DoWorkEventHandler(this.BgW_CheckGolden_DoWork);
+            this.BgW_CheckGolden.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.BgW_CheckGolden_RunWorkerCompleted);
             // 
             // P4_CollarTestForm
             // 

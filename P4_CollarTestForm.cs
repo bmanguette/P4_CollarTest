@@ -291,6 +291,58 @@ namespace P4_CollarTest
             }
         }
 
+        private void buttonCheckGolden_Click(object sender, EventArgs e)
+        {
+
+            if (comPortGolden != null)
+            {
+                BgW_CheckGolden.RunWorkerAsync();
+                ResetButton();
+            }
+            else SetText(textBoxLog, "No Comm Port selected\r\n");
+        }
+
+        /******************************************
+         *      BackGround : Check if Golden      *
+         *                                        *
+         ******************************************/
+        private void BgW_CheckGolden_DoWork(object sender, DoWorkEventArgs e)
+        {
+            try
+            {
+                Version sVersion = new Version(msSerialPortGolden);
+                SetText(textBoxLog, "Version Golden : " + sVersion.toString() + "\r\n");
+                if (!sVersion.golden)
+                {
+                    e.Result = "Carte détectée, mais pas la GOLDEN";
+                    return;
+                }
+            }
+            catch (Exception exc)
+            {
+                /* Return error if an exception occurs */
+                e.Result = "" + exc.Message;
+            }
+
+
+        }
+
+        private void BgW_CheckGolden_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            if (e.Result != null)
+            {
+                SetLabel(labelStatus, (string)e.Result);
+                ResetButton();
+
+            }
+            else
+            {
+                SetLabel(labelStatus, "PCB GOLDEN détecté");
+                EnableComPortToCheck();
+                UpdateComPortToCheck();
+            }
+        }
+
 
     }
 }
