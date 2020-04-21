@@ -81,6 +81,7 @@
             this.comboBoxComPortGolden.Name = "comboBoxComPortGolden";
             this.comboBoxComPortGolden.Size = new System.Drawing.Size(121, 21);
             this.comboBoxComPortGolden.TabIndex = 12;
+            this.comboBoxComPortGolden.SelectedIndexChanged += new System.EventHandler(this.comboBoxComPortGolden_SelectedIndexChanged);
             // 
             // comboBoxComPortToTest
             // 

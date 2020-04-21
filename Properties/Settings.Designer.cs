@@ -26,5 +26,49 @@ namespace P4_CollarTest.Properties
                 return defaultInstance;
             }
         }
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public uint Year
+        {
+            get
+            {
+                return ((uint)(this["Year"]));
+            }
+            set
+            {
+                this["Year"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public uint Week
+        {
+            get
+            {
+                return ((uint)(this["Week"]));
+            }
+            set
+            {
+                this["Week"] = value;
+            }
+        }
+
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public uint Serial
+        {
+            get
+            {
+                return ((uint)(this["Serial"]));
+            }
+            set
+            {
+                this["Serial"] = value;
+            }
+        }
     }
 }
