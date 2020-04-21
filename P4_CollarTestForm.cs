@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace P4_CollarTest
 {
-    public partial class Form1 : Form
+    public partial class P4_CollarTestForm : Form
     {
-        public Form1()
+        public P4_CollarTestForm()
         {
             InitializeComponent();
         }

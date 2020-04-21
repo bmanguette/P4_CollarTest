@@ -1,6 +1,6 @@
 ﻿namespace P4_CollarTest
 {
-    partial class Form1
+    partial class P4_CollarTestForm
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
